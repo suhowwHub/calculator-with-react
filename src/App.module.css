@@ -1,46 +1,66 @@
 .calculator {
-	width: 300px;
-	height: 400px;
-	background-color: #fff;
 	border-radius: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	margin-block-start: 2em;
+	max-inline-size: 22rem;
 	overflow: hidden;
+	color: hsl(202, 11%, 29%);
 }
-
-.calculator__display {
-	height: 80px;
-	background-color: #f5f5f5;
-	border-bottom: 1px solid #ccc;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	padding: 10px;
-	font-size: 24px;
-	color: #333;
+.calculator__output {
+	background: hsl(255, 100%, 100%);
+	font-size: 4.2rem;
+	padding-block: 0.5rem;
+	padding-inline: 1.25rem;
+	text-align: end;
 }
-
-.calculator__button {
-	width: 70px;
-	height: 70px;
+.calculator__keys {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1px;
+	background: hsl(255, 100%, 100%);
+	padding: 0.5rem;
+}
+.calculator__key {
+	background: hsl(210, 25%, 95%);
 	border: none;
-	background-color: #fff;
-	color: #333;
-	font-size: 18px;
-	cursor: pointer;
+	padding-block-start: 1rem;
+	padding-block-end: 1rem;
+	padding-inline-end: 1.25rem;
+	padding-inline-start: 1.25rem;
+	font-size: 1.5rem;
+	inline-size: 70px;
+	block-size: 70px;
+	margin: 0.25rem;
+	border-radius: 40px;
+}
+.calculator__key:active {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3) inset;
+	outline: none;
+}
+.calculator__key__operator {
+	background: hsl(208, 25%, 86%);
+}
+.calculator__key__operator:active {
+	background: hsl(208, 24%, 80%);
+}
+.calculator__key__enter {
+	grid-column: 4 / 5;
+	grid-row: 3 / span 3;
+	background: hsl(357, 100%, 72%);
+	height: auto;
 }
 
-.calculator__button:hover {
-	background-color: #f5f5f5;
+.calculator__key__reset {
+	background-color: hsl(357, 100%, 72%);
 }
 
-.calculator__button--operator {
-	color: #007bff;
+.calculator__output__preveiw {
+	text-align: left;
+	font-size: 2.2rem;
+	color: hsl(208, 24%, 80%);
 }
 
-.calculator__button--number {
-	color: #333;
-}
-
-.calculator__button--special {
-	color: #ff0000;
+.calculator__output__input {
 }
